@@ -70,3 +70,19 @@ Feature: test
     Then status 200
     And match response.userId == 999
 
+  @NsogrContract
+  Scenario: NsogrContract
+    Given path 'posts/1'
+    When method GET
+    Then status 200
+    And match response.id == 1
+    And match response.userId == 1
+
+  @NsogrContractEntry
+  Scenario: NsogrContractEntry
+    Given path 'posts/1'
+    When method GET
+    Then status 200
+    And match response.id == 1
+    And match response.userId == 1
+
